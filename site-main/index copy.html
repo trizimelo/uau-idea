@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uau Idea</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
+    position: fixed;
+    left: 30px;
+}
+nav a {
+    display: block;
+    margin: 20px;
+}
+nav a img {
+    width: 40px;
+}
+textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid gray 1px;
+    font-size:20px ;
+    resize: none;
+}
+header{
+    background-color: #ffee32;
+    height: 650px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3.5em;
+    color: #ffee32;
+    font-weight: bolder;
+}
+h2 {
+    color: #202020;
+    font-weight: bolder;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+input{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: solid gray 1px;
+    font-size: 20px;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    border-bottom: solid #202020 2px;
+    outline: 0;
+    resize: none;
+}  
+
+form{
+    padding:25px;
+    background-color: #ffee32;
+    width:800px;
+    margin: 0px auto 0px auto;
+}
+hr{
+    height: 0.3em; 
+    border-radius: 5px; 
+    width: 328px;
+    margin: 20px 0px; 
+    background: #ffee32;
+    border: none;
+}
+.anel1 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: rgba(0, 0, 0, 0.658) solid 3px; */
+    background-color: #202020;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+.anel2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: rgba(0, 0, 0, 0.781) solid 4px; */
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+.anel3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: rgba(0, 0, 0, 0.877) solid 5px; */
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+.sec-1 {
+    padding-top: 240px;
+    background-color: #ffee32;
+}
+.sec-1 > article > p {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.sec-1_art-1 {
+    margin-bottom: 110px;
+}
+.sec-1_art-2 > div > p {
+    font-size: 1.5em;
+    text-align: center;
+}
+.sec-1_art-2 > div > span {
+    font-size: 6em;
+    text-align: center;
+}
+.sec-1_art-2 > div {
+    width: 170px;
+    text-align: center;
+}
+.sec-2 {
+    background-color: #202020;
+    color: #ffee32;
+}
+.sec-1_art-2 {
+    padding: 40px 0px 100px 0px ;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sec-2_art-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sec-2_art-1 > div > h3 {
+    font-size: 1.5em;
+    padding: 0px 0px 10px 0px;
+}
+.sec-2 > h2 {
+    color: #ffee32;
+    padding: 100px;
+    font-size: 3em;
+    font-weight: bolder;
+}
+.sec-2_art-1 > div {
+    margin-bottom: 140px;
+}
+.sec-2_art-1 > div > h3 {
+    color: #ffee32;
+}
+.img-projetos {
+    overflow: hidden;
+}
+.img-projetos > img {
+    -webkit-transition: -webkit-transform .5s ease;
+    width: 330px;
+    filter: brightness(0.8) grayscale(0.9) contrast(0.8) blur(1px);
+    transition: ease-in-out 0.5s;
+}
+.img-projetos > img:hover{
+    filter: brightness(1) grayscale(0) contrast(1) blur(0px);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.sec-3 {
+    background: #ffee32;
+}
+.sec-3 > h2 {
+    padding: 100px;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.sec-3 > article > article{
+    flex-flow: wrap;
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.sec-3 > article > article > p, .sec-3 > article > article > h3 {
+    padding: 10px;
+} 
+.sec-3 > article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sec-4 {
+    background: #202020;
+}
+.sec-4 > h2 {
+    color: #ffee32;
+    padding: 100px;
+}
+.sec-4_art-1 {
+    width: 800px;
+    /* background: rgba(0, 128, 0, 0.178); */
+    margin: 0px auto 0px auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.moldura {
+    display: block;
+    margin: 0px auto 0px auto;
+}
+.equipe {
+    position: absolute;
+    top: 120px;
+    right: 21px;
+    width: 750px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.equipe > div {
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+}
+.membros {
+    border-radius: 50%;
+    padding-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    filter: blur(5px);
+    transition: ease-in-out 0.5s;
+}
+.membros:hover {
+    filter: blur(0px);
+    transition: ease-in-out 0.5s;
+}
+.letra-amarela{
+    color: #ffee32;
+}
+.infos{
+    padding: 50px;
+    background-color: #ffee32;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around ;
+}
+
+#copy{
+    font-size: 10px;
+}
+
+#contatohh{
+    background-color: #ffee32;
+}
+
+#btn{
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    color: #202020;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bolder;
+    transition: ease-in-out 0.25s;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+#btn:hover{
+    border: black 3px solid;
+    font-size: 1.1em;
+    color: #ffee32;
+    background-color: #202020 ;
+    transition: ease-in-out 0.25s;
+}
+
+form > p{
+    font-size: bolder;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 820px) {
+    nav {
+        position: fixed;
+        top: 100px;
+        left: 15px;
+    }
+    nav a {
+        display: block;
+        margin: 25px 0px;
+    }
+    nav a img {
+        width: 30px;
+    }
+    .sec-4_art-1 {
+        width: 600px;
+    }    
+    .moldura {
+        width: 500px;
+    }
+    .sec-4 > h2 {
+        font-size: 2em;
+        padding: 70px;
+    }
+    .equipe {
+        position: absolute;
+        top: 78px;
+        left: 74px;
+        width: 450px;
+    }
+    .equipe > div {
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 200px;
+        text-align: center;
+    }
+    .equipe > div > img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        width: 120px;
+        height: 120px;
+    }
+    .equipe > div > h3 {
+        font-size: 1em;
+    }
+    .equipe > div > p {
+        font-size: 0.8em;
+    }
+    .equipe > div > span {
+        font-size: 0.8em;
+    } 
+    
+    #contatohh{
+        width: 94%;
+    }
+
+    form{
+        width: 99%;
+    }
+
+    form > textarea{
+        columns: 40;
+
+    }
+    
+}
+@media only screen and (max-width: 620px) {
+    nav {
+        position: fixed;
+        top: 200px;
+        left: 15px;
+    }
+    header{
+        height: 500px;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    hr{
+        height: 0.3em; 
+        border-radius: 5px; 
+        width: 250px;
+        margin: 20px 0px; 
+    }
+    .anel1 {
+        margin-top: 100px;
+        width: 300px;
+        height: 300px;
+    }
+    .anel2 {
+        width: 200px;
+        height: 200px;
+    }
+    .anel3 {
+        width: 100px;
+        height: 100px;
+    }
+    .sec-1_art-1 {
+        margin: -40px auto 10px auto;
+    }
+    .sec-2_art-1 {
+        padding-bottom: 20px;
+    }
+    .sec-2_art-1 > div > h3 {
+        color: #ffee32;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 0px;
+    }
+    .sec-2 > h2 {
+        padding: 80px;
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    .sec-2_art-1 > div {
+        margin-bottom: 60px;
+    }
+    .img-projetos > img {
+        width: 250px;
+    }
+    .sec-3 {
+        background: #ffee32;
+    }
+    .sec-3 > h2 {
+        font-size: 2em;
+    }
+    .sec-3 > article > article{
+        margin-bottom: 40px;
+    }
+    .sec-4 > h2 {
+        padding: 80px 20px 20px;
+    }
+    .sec-4_art-1 {
+        width: 100%;
+        position: static;
+        padding-bottom: 20px;
+    }
+    .moldura {
+        display: none;
+    }
+    .equipe {
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        position: static;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .equipe > div {
+        margin: 20px auto;
+        flex-flow: column wrap;
+        justify-content: center;
+        width: 250px;
+        text-align: center;
+    }
+    .equipe > div > img {
+        border-radius: 50%;
+        border: black 2px solid;
+        width: 230px;
+        height: 230px;
+    }
+    .equipe > div > h3 {
+        padding-top: 20px;
+    }
+
+    #contatohh{
+        width: 87%;
+    }
+
+    form{
+        width: 99%;
+    }
+
+    form > textarea{
+        columns: 40;
+
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="anel1">
+            <div class="anel2">
+                <div class="anel3">
+                    <h1>UAUIDEA</h1>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="https://www.facebook.com/uauidea"><img src="https://media.discordapp.net/attachments/774424036636885022/799737659341012992/facebook-solid.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/uau-idea-5660a31bb/"><img src="https://media.discordapp.net/attachments/774424036636885022/799737562670694441/linkedin-2662666-2213265.png" alt=""></a>
+            <a href="https://www.instagram.com/uauidea/"><img src="https://maxcdn.icons8.com/Share/icon/androidL/Logos/instagram_new1600.png" alt=""></a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="sec-1">
+            <article class="sec-1_art-1">
+                <h2>Muito mais que uma <br> agência digital</h2>
+                <p>
+                    Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.
+                </p>
+            </article>
+            <article class="sec-1_art-2">
+                <!-- <div>
+                    <span>85%</span>
+                    <p>Clientes e empregados avaliados</p>
+                </div>
+                <div>
+                    <span>12+</span>
+                    <p>Países onde mantemos campanhas</p>
+                </div>
+                <div>
+                    <span>16</span>
+                    <p>Funcionários talentososna nossa equipe</p>
+                </div> -->
+            </article>
+        </section>
+
+        <section class="sec-2">
+            <h2>ÚLTIMOS  <br> PROJETOS</h2>
+            <article class="sec-2_art-1">
+                <div>
+                    <h3>
+                        TÍTULO DO PROJETO
+                    </h3>
+                    <hr>
+                    <div class="img-projetos">
+                        <img src="https://scontent.fgru9-1.fna.fbcdn.net/v/t1.0-9/87054883_129803145236719_5354443368946466816_o.jpg?_nc_cat=108&ccb=2&_nc_sid=174925&_nc_eui2=AeHDzQdNtSHQGQ_2-DorXZncZ45kCm5738xnjmQKbnvfzFWlIJvDd8DnEyQ2eshSdBarCEAgGfyN6RxcuADUOm7M&_nc_ohc=ssHbQ4Ly1BoAX-Envh0&_nc_ht=scontent.fgru9-1.fna&oh=0a4afc4baac2fb25d73ea16e1ae1017a&oe=6029FB9C" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h3>
+                        TÍTULO DO PROJETO
+                    </h3>
+                    <hr>
+                    <div class="img-projetos">
+                        <img src="https://images.pexels.com/photos/2401400/pexels-photo-2401400.jpeg?cs=srgb&dl=pexels-ike-louie-natividad-2401400.jpg&fm=jpg" alt="">
+                    </div>   
+                </div>            
+                <div>
+                    <h3>
+                        TÍTULO DO PROJETO
+                    </h3>
+                    <hr>
+                    <div class="img-projetos">
+                        <img src="https://scontent.fgru9-1.fna.fbcdn.net/v/t1.0-9/60506130_2364421103879422_6729716829410820096_o.jpg?_nc_cat=103&ccb=2&_nc_sid=cdbe9c&_nc_eui2=AeGY0m8aMnhYCVgePgps4b0KcpI8PsIxz51ykjw-wjHPnXJ6zraTPmX-hceGnOLdVS1rYvf7SvuCK2s9qZW8lBXO&_nc_ohc=df2h_FCyIjUAX-IqFaI&_nc_ht=scontent.fgru9-1.fna&oh=50836eca03c5e2640746a2a840e605a4&oe=602BC9AE" alt="">
+                    </div>                
+                </div>  
+            </article>
+        </section>
+        <section class="sec-3">
+            <h2>SERVIÇOS</h2>
+            <article>
+                <article>
+                    <img src="https://static.wixstatic.com/media/ea26fd_7ccc4ffc033a4a15acbbff665578252b~mv2.png/v1/fill/w_124,h_129,al_c,lg_1,q_85/ea26fd_7ccc4ffc033a4a15acbbff665578252b~mv2.webp" alt="">
+                    <h3>BRANDING</h3>
+                    <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                </article>
+                <article>
+                    <img src="https://static.wixstatic.com/media/ea26fd_ccf38516ae9147fc8deb1978759d2965~mv2.png/v1/fill/w_124,h_129,al_c,lg_1,q_85/ea26fd_ccf38516ae9147fc8deb1978759d2965~mv2.webp" alt="">
+                    <h3>CRIATIVIDADE</h3>
+                    <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                </article>
+                <article>
+                    <img src="https://static.wixstatic.com/media/ea26fd_d0155ac4a35342c79a636f4bae766436~mv2.png/v1/fill/w_124,h_129,al_c,lg_1,q_85/ea26fd_d0155ac4a35342c79a636f4bae766436~mv2.webp" alt="">
+                    <h3>CONTEÚDO</h3>
+                    <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                </article>
+            </article>
+        </section>
+        <section class="sec-4">
+            <h2>A EQUIPE</h2>
+            <article class="sec-4_art-1">
+                <img class="moldura" src="img/moldura-1.png" alt="">
+                <div class="equipe">
+                    <div>
+                        <img class="membros" src="img/bea1.png" alt="">
+                        <h3 class="letra-amarela">Beatriz Melo</h3>
+                        <span class="letra-amarela"><i>Dev. Full-Stack</i></span>
+                        <p class="letra-amarela">Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                    </div>
+                    <div>
+                        <img class="membros" src="img/daniel1.png" alt="">
+                        <h3 class="letra-amarela">Daniel Galdino</h3>
+                        <span class="letra-amarela"><i>Dev. Full-Stack</i></span>
+                        <p class="letra-amarela">Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                    </div>
+                    <div>
+                        <img class="membros" src="img/sofia1.png" alt="">
+                        <h3 class="letra-amarela">Sofia Costa</h3>
+                        <span class="letra-amarela">Designer</span>
+                        <p class="letra-amarela">Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.</p>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div id="contatohh">
+            <form>
+                <br>
+                <h2>
+                    POSSO AJUDAR?
+                </h2>
+                <br>
+                <br>
+                <div> 
+                    <input type="text" style="min-width: 80%;;" placeholder="Nome">
+                    <input type="email" style="min-width:80%;" placeholder="E-mail">
+                </div>
+                <div>
+                    <br>
+                    <input type="text" style="min-width:80%;" placeholder="Assunto">
+                    <br>
+                </div>
+                <div>
+                    <br>
+                    <textarea id="msg" style="min-width:80%;" rows="6" placeholder="Mensagem"></textarea>
+                </div>
+                <br>
+                <div>
+                    <button id="btn" type="submit"> Enviar!</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="infos">
+            <article>
+                E-MAIL:
+                <div>
+                    <p>contato@uauidea.com.br</pp>
+                </div>
+            </article>
+            <article>
+                TELEFONE:
+                <div>
+                    <p>11996207184</p>
+                </div>
+            </article>
+            <article>
+                FUNCIONAMENTO:
+                <div>
+                    <p>
+                        SEG A SEXTA: 9hrs às 18hrs
+                    </p>
+                    <p>
+                        SAB: 9hrs às 15hrs  
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="infos">
+            <div>
+                <p id="copy">UAUIDEA © 2020</p>  
+              </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
